@@ -1,0 +1,35 @@
+{
+    "name": "fx/platform",
+    "description": "多平台管理方案",
+    "license": "MIT",
+    "type": "library",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "nfangxu",
+            "email": "nfangxu@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fx\\Platform\\Providers\\PlatformServiceProvider"
+            ],
+            "aliases": {
+                "Platform": "Fx\\Platform\\Facades\\Platform"
+            }
+        }
+    },
+    "autoload": {
+        "files": [],
+        "psr-4": {
+            "Fx\\Platform\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

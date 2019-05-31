@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyInterfaceClass as Repository;
+
+class DummyClass implements Repository
+{
+	// 
+}
