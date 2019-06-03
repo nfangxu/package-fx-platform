@@ -26,8 +26,6 @@ class PlatformServiceProvider extends ServiceProvider
 
 	public function register()
 	{
-		$this->app->singleton('platform', function () {
-			return new PlatformService();
-		});
+		// 
 	}
 }
