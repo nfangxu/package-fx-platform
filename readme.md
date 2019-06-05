@@ -51,7 +51,7 @@ public function register()
 	// others ...
 
 	// UserRepository
-	// Platform::register(UserRepository::class, DefaultUserRepository::class);
+	Platform::register(UserRepository::class, DefaultUserRepository::class);
 	// Or
 	// Platform::registerGroup([UserRepository::class => DefaultUserRepository::class]);
 }
