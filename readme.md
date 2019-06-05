@@ -51,9 +51,9 @@ public function register()
 	// others ...
 
 	// UserRepository
-	$this->app->bind(UserRepository::class, function () {
-		return Platform::dispatch(UserRepository::class, DefaultUserRepository::class);
-	});
+	// Platform::register(UserRepository::class, DefaultUserRepository::class);
+	// Or
+	// Platform::registerGroup([UserRepository::class => DefaultUserRepository::class]);
 }
 
 ```
