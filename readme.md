@@ -1,5 +1,8 @@
 # 多平台解决方案
 
+> 基本思路: 通过 `路由参数` 来分辨不同的平台, 通过平台的不同, 实例化不同的 `Repository` 来实现数据的不同调用;
+> 本项目的作用是简化这个过程
+
 ## 命令列表
 
 - `php artisan platform:make {name}` : 创建一组 Repository 
