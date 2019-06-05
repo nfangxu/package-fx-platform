@@ -3,7 +3,6 @@
     "description": "多平台管理方案",
     "license": "MIT",
     "type": "library",
-    "version": "1.0",
     "authors": [
         {
             "name": "nfangxu",

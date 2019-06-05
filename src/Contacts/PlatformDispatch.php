@@ -4,5 +4,7 @@ namespace Fx\Platform\Contacts;
 
 interface PlatformDispatch
 {
-	public function dispatch($abstract, $default);
+	public function register($abstract, $default);
+
+	public function registerGroup($abstracts);
 }

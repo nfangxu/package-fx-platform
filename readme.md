@@ -1,5 +1,11 @@
 # 多平台解决方案
 
+## 命令列表
+
+- `php artisan platform:make {name}` : 创建一组 Repository 
+
+- `php artisan platform:init` : 初始化
+
 ## 安装说明
 
 - Composer
@@ -8,10 +14,10 @@
 composer require fx/platform
 ```
 
-- 发布配置文件
+- 初始化
 
 ```bash
-php artisan vendor:publish --provider="Fx\\Platform\\Providers\\PlatformServiceProvider"
+php artisan platform:init
 ```
 
 ## 使用

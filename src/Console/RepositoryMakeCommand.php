@@ -85,7 +85,7 @@ class RepositoryMakeCommand extends GeneratorCommand
 
 	protected function getContactNamespace()
 	{
-		return config('platform.namespace.contacts');
+		return config('platform.repository.contact');
 	}
 
 	protected function getServiceNamespace($platform)
@@ -93,7 +93,7 @@ class RepositoryMakeCommand extends GeneratorCommand
 		return str_replace(
 			"{platform}",
 			$platform,
-			config('platform.namespace.services')
+			config('platform.repository.service')
 		);
 	}
 

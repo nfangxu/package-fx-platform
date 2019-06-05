@@ -6,17 +6,31 @@ use Fx\Platform\Contacts\PlatformDispatch;
 use Fx\Platform\Contacts\PlatformRoute;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use Fx\Platform\Exceptions\PlatformRepositoryException;
 
 class PlatformService implements PlatformDispatch, PlatformRoute
 {
-	public function dispatch($abstract, $default)
+	public function register($abstract, $default)
 	{
-		$service = self::getService($abstract);
+		if (!$default) {
+			throw new PlatformRepositoryException("No default Repository for " . $abstract);
+		}
 
-		if (class_exists($service)) {
-			return app()->make($service);
-		} else {
-			return app()->make($default);
+		app()->bind($abstract, function () use ($abstract, $default) {
+			$service = self::getService($abstract);
+
+			if (class_exists($service)) {
+				return app()->make($service);
+			} else {
+				return app()->make($default);
+			}
+		});
+	}
+
+	public function registerGroup($abstracts)
+	{
+		foreach ($abstracts as $abstract => $default) {
+			$this->register($abstract, $default);
 		}
 	}
 
